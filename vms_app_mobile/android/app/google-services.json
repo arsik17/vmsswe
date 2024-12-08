@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257932538864",
+    "project_id": "vms-app-owfplb",
+    "storage_bucket": "vms-app-owfplb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257932538864:android:4efd337cf6fef66ca86335",
+        "android_client_info": {
+          "package_name": "com.mycompany.vmsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "OSKVOPKSPOBKsobkpobkpKO_-bosdkbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

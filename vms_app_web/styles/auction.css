@@ -1,0 +1,128 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+.new-modal {
+    border-radius: 10px;
+    width: 700px;
+    height: 440px;
+    background-color: white;
+}
+
+.input-group {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 400;
+}
+#description {
+    width: calc(100% - 15px);
+    height: 120px;
+    max-height: 130px;
+    padding: 3px;
+    font-size: 20px;
+    resize: none;
+    border: 1px solid black;
+    background-color: rgba(230, 230, 225, 0.075);
+    border-radius: 6px;
+    margin-bottom: -25px;
+}
+.textarea-field {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.inp-col {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: -30px;
+}
+#select-img {
+    margin-left: 10px;
+}
+.left {
+    margin-right: 10px;
+}
+.input-field {
+    margin: 10px;
+    flex: 1;
+}
+
+input {
+    width: 320px;
+    height: 45px;
+    border: 1px solid black;
+    background-color: rgba(230, 230, 225, 0.075);
+    border-radius: 6px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+select {
+    width: 320px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: rgba(230, 230, 225, 0.075);
+    border-radius: 6px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+#avatar {
+    height: fit-content;
+    margin-left: 7px;
+}
+.under {
+    margin-bottom: 10px;
+}
+
+.users-cancelsub {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.addnewbut {
+    font-size: 20px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    width: 90px;
+    padding: 8px;
+    height: fit-content;
+    margin: 5px;
+}
+
+#cancel {
+    background-color: rgb(237, 52, 52);
+    cursor: pointer;
+}
+
+#cancel:hover {
+    transition: linear 10ms;
+    background-color: black;
+}
+
+#save {
+    background-color: rgb(63, 194, 58);
+    cursor: pointer;
+}
+#save:hover {
+    transition: linear 10ms;
+    background-color: black;
+}
+.add-button {
+    font-size: 15px;
+    font-weight: 500;
+}
+#name {
+    margin-left: 0;
+}

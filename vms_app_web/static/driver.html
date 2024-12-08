@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/dashboard.css" />
+        <link rel="stylesheet" href="/styles/driver.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="header">
+                <a class="logo" href="main.html">
+                    <img
+                        src="/assets/icons8-truck-96.png"
+                        width="35px"
+                        height="32px"
+                    />
+                    <p id="site-name">VMS Panel</p>
+                </a>
+
+                <a id="profile" href="">
+                    <!-- <img src="" width="37px" height="35px" /> -->
+                </a>
+            </div>
+
+            <div id="content" class="container-fluid">
+                <div id="sidebar" class="bg-light sidebar">
+                    <a href="/driver.html" class="sb-button" id="driver">
+                        <img
+                            class="clicked"
+                            src="/assets/sidebar/car-svgrepo-com.svg"
+                            alt=""
+                        />
+                        <p>Drivers</p>
+                    </a>
+                    <a href="/vehicle.html" class="sb-button" id="caregiver">
+                        <div>
+                            <img
+                                class="clicked"
+                                src="/assets/sidebar/id-card-svgrepo-com.svg"
+                                alt=""
+                                width="40px"
+                            />
+                        </div>
+                        <p>Vehicles</p>
+                    </a>
+                    <a href="/fueler.html" class="sb-button" id="fueler">
+                        <div>
+                            <img
+                                class="clicked"
+                                src="/assets/sidebar/gas-station.png"
+                                alt=""
+                                width="40px"
+                            />
+                        </div>
+                        <p>Fuelers</p>
+                    </a>
+                    <a
+                        href="/maintainer.html"
+                        class="sb-button"
+                        id="maintainer"
+                    >
+                        <div>
+                            <img
+                                class="clicked"
+                                src="/assets/sidebar/maintenance.png"
+                                alt=""
+                                width="40px"
+                            />
+                        </div>
+                        <p>Maintainers</p>
+                    </a>
+                    <a href="/route.html" class="sb-button" id="route">
+                        <img
+                            class="clicked"
+                            src="/assets/sidebar/file-2-svgrepo-com.svg"
+                            alt=""
+                            width="40px"
+                        />
+                        <p>Routes</p>
+                    </a>
+
+                    <a href="/auction.html" class="sb-button" id="auction">
+                        <div>
+                            <img
+                                class="clicked"
+                                src="/assets/sidebar/bidding.png"
+                                alt=""
+                                width="40px"
+                            />
+                        </div>
+                        <p>Auctions</p>
+                    </a>
+                    <a href="/report.html" class="sb-button" id="report">
+                        <div>
+                            <img
+                                class="clicked"
+                                src="/assets/sidebar/file.png"
+                                alt=""
+                                width="40px"
+                            />
+                        </div>
+                        <p>Reports</p>
+                    </a>
+                </div>
+
+                <div id="site">
+                    <div class="container">
+                        <div class="top"></div>
+                        <div class="columns"></div>
+                        <div class="list">
+                            <!-- <div class="element"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/scripts/mains/driver.js"></script>
+        <script src="/scripts/contents/driver_content.js"></script>
+        <script src="/scripts/change/driver_add.js"></script>
+        <script src="/scripts/change/driver_view.js"></script>
+        <script src="/scripts/change/driver_delete.js"></script>
+        <script src="/scripts/mains/main.js"></script>
+    </body>
+</html>

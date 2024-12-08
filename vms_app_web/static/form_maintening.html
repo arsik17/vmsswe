@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/form.css" />
+        <title>Maintenance Form</title>
+    </head>
+    <body>
+        <div class="app">
+            <form
+                action="/createMaintenance"
+                method="POST"
+                enctype="multipart/form-data"
+                id="fuelingForm"
+            >
+                <div class="input-group">
+                    <h1>Maintenance Form</h1>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Maintenance Person ID:</p>
+                            <input
+                                class="text"
+                                type="text"
+                                id="maintenance_person_id"
+                                name="maintenance_person_id"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Vehicle ID:</p>
+                            <input
+                                class="text"
+                                type="text"
+                                id="vehicle_id"
+                                name="vehicle_id"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Parts:</p>
+                            <input
+                                class="text"
+                                type="text"
+                                id="parts"
+                                name="parts"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Costs:</p>
+                            <input
+                                type="number"
+                                id="cost"
+                                class="text"
+                                name="cost"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Year:</p>
+                            <input
+                                type="number"
+                                id="year"
+                                class="text"
+                                name="year"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Month:</p>
+                            <input
+                                type="number"
+                                id="month"
+                                class="text"
+                                name="month"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Day:</p>
+                            <input
+                                type="number"
+                                id="day"
+                                class="text"
+                                name="day"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Service Type:</p>
+                            <input
+                                type="text"
+                                id="service_type"
+                                class="text"
+                                name="service_type"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Maintenance Proof (Image):</p>
+                            <input
+                                class="text"
+                                type="file"
+                                id="maintenance_proof"
+                                name="maintenance_proof"
+                                accept="image/*"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        id="save"
+                        class="addnewbut"
+                        onclick="submitForm()"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function submitForm() {
+                const form = document.getElementById("fuelingForm");
+
+                const formData = new FormData(form);
+
+                fetch("/createMaintenance", {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log("Success:", data);
+                        // Handle success response if needed
+                        window.location.href = "./maintenance.html";
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        // Handle error if needed
+                    });
+
+                return false;
+            }
+        </script>
+    </body>
+</html>

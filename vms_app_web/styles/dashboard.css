@@ -1,0 +1,245 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+#app {
+    position: relative;
+    height: 100vh;
+}
+
+.new-bg {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(128, 128, 128, 0.842);
+}
+.new-modal {
+    border-radius: 10px;
+    width: 700px;
+    height: 570px;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 8px;
+    background-color: rgb(0, 0, 0);
+}
+
+#profile {
+    margin-left: auto;
+    padding-top: 15px;
+    margin-right: 18px;
+}
+
+.logo {
+    margin-left: 20px;
+    margin-bottom: -6px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+.logo a {
+    padding-bottom: -5px;
+}
+
+#site-name {
+    margin-left: 9px;
+    margin-top: 7px;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    word-spacing: 0;
+}
+
+/* everything under header part */
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+#site {
+    flex: 1;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
+.container {
+    width: calc(100%-20px);
+    height: calc(100% - 25px);
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* top part of container with title and add button */
+.top {
+    height: 80px;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.add-button {
+    width: max-content;
+    margin-left: auto;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 6px;
+
+    background-color: rgb(102, 50, 222);
+    color: white;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    transition: linear 10ms;
+    background-color: rgb(0, 0, 0);
+}
+
+/* columns par of container with names of columns in table */
+#avatar {
+}
+.columns {
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid rgb(190, 190, 190);
+}
+.title {
+    margin-left: 10px;
+}
+.list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: auto; */
+    overflow-y: scroll;
+    height: 78%;
+}
+.element {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 190, 190);
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+.text {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 15px;
+    word-break: break-all;
+}
+#name {
+    margin-left: 40px;
+}
+.change-bt {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-right: 10px;
+}
+.change {
+    display: flex;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+#d {
+    background-color: rgb(222, 76, 50);
+    cursor: pointer;
+}
+
+#d:hover {
+    background-color: black;
+    transition: 5ms;
+}
+
+#c {
+    background-color: rgb(102, 50, 222);
+    cursor: pointer;
+}
+
+#c:hover {
+    background-color: black;
+    transition: 5ms;
+}
+
+.change img {
+    width: 22px;
+}
+
+/* lef part of site */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    padding-top: 40px;
+    width: 200px;
+    /* margin-right: 10px; */
+    /* box-shadow: 5px 3px 12px rgb(173, 173, 173); */
+}
+
+.sb-button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    width: 90%;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+.sb-button p {
+    padding-left: 18px;
+    font-size: 19px;
+    font-weight: 600;
+    color: black;
+}
+
+.clicked {
+    margin-left: 10px;
+    width: 25px;
+}
+
+.sb-button:focus {
+    background-color: aliceblue;
+}

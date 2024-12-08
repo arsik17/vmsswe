@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/form.css" />
+        <title>Fueling Form</title>
+    </head>
+    <body>
+        <div class="app">
+            <form
+                action="/createFueling"
+                method="POST"
+                enctype="multipart/form-data"
+                id="fuelingForm"
+            >
+                <div class="input-group">
+                    <h1>Fueling Form</h1>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Fueler ID:</p>
+                            <input
+                                class="text"
+                                type="text"
+                                id="fuelerID"
+                                name="fueler_id"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Vehicle ID:</p>
+                            <input
+                                class="text"
+                                type="text"
+                                id="vehicleID"
+                                name="vehicle_id"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Fuel Amount:</p>
+                            <input
+                                class="text"
+                                type="number"
+                                step="any"
+                                id="fuelAmount"
+                                name="fuel_amount"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Total Cost:</p>
+                            <input
+                                class="text"
+                                type="number"
+                                step="any"
+                                id="totalCost"
+                                name="total_cost"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Year:</p>
+                            <input
+                                type="number"
+                                id="year"
+                                class="text"
+                                name="year"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Month:</p>
+                            <input
+                                type="number"
+                                id="month"
+                                class="text"
+                                name="month"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Day:</p>
+                            <input
+                                type="number"
+                                id="day"
+                                class="text"
+                                name="day"
+                                required
+                            /><br />
+                        </div>
+                        <div class="input-field">
+                            <p>Gas Station:</p>
+                            <input
+                                type="text"
+                                id="gasStation"
+                                name="gas_station"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <div class="inp-row">
+                        <div class="input-field">
+                            <p>Fueling Proof (Image):</p>
+                            <input
+                                class="text"
+                                type="file"
+                                id="fuelingProof"
+                                name="fueling_proof"
+                                accept="image/*"
+                                required
+                            /><br />
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        id="save"
+                        class="addnewbut"
+                        onclick="submitForm()"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function submitForm() {
+                const form = document.getElementById("fuelingForm");
+                const formData = new FormData(form);
+
+                fetch("/createFueling", {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log("Success:", data);
+                        // Handle success response if needed
+                        window.location.href = "./fueling.html";
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        // Handle error if needed
+                    });
+            }
+        </script>
+    </body>
+</html>
